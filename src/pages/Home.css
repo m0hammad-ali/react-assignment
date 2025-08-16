@@ -1,0 +1,19 @@
+.home {
+  padding: 2rem;
+}
+
+.home h3 {
+  margin-top: 2rem;
+}
+
+.home ul {
+  list-style-position: inside;
+  list-style-type: square;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.home ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}

@@ -1,0 +1,22 @@
+.services {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.services h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  border-left: 4px solid #00bcd4;
+  padding-left: 1rem;
+}

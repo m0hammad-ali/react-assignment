@@ -1,0 +1,21 @@
+.about {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.about h3 {
+  margin-top: 2rem;
+  color: #0e1a2b;
+}
+
+.about ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.about ul li {
+  margin-bottom: 0.5rem;
+}
