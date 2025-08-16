@@ -8,7 +8,7 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 
 function App() {
-  const currentPage = 'Contact';
+  const currentPage = 'Home';
   let PageComponent;
   switch (currentPage) {
     case 'Home':
