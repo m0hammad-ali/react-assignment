@@ -1,35 +1,83 @@
+/* Header Wrapper */
 .site-header {
-  background: #0e1a2b;
+  background-color: #0e1a2b;
   padding: 1rem 2rem;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+/* Navbar Flex Container */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative; /* Ensure dropdown positions correctly */
 }
 
+/* Logo */
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
   cursor: pointer;
 }
 
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 
 .nav-links li {
   color: white;
-  text-decoration: none;
   font-weight: 500;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.2s ease;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
 }
 
 .nav-links li:hover {
   color: #00bcd4;
+  background-color: rgba(0, 188, 212, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0e1a2b;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 8px 8px;
+    z-index: 1100;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on tap */
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
 }

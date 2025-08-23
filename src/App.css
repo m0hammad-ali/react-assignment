@@ -3,8 +3,12 @@ main {
   max-width: 70%;
   padding: 2rem 5rem;
   margin: auto;
+  background-color: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+/* Headings */
 h2 {
   font-size: 2rem;
   color: #0e1a2b;
@@ -17,7 +21,59 @@ h3 {
   color: #333;
 }
 
+/* Links */
 a {
   text-decoration: none;
   color: inherit;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  main {
+    max-width: 80%;
+    padding: 2rem 3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    max-width: 90%;
+    padding: 1.5rem 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    max-width: 95%;
+    padding: 1rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
 }
