@@ -1,4 +1,5 @@
 import './App.css'
+import { useState } from 'react';
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Home from './pages/Home';
@@ -8,30 +9,26 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 
 function App() {
-  const currentPage = 'Home';
+  const [currentPage, setCurrentPage] = useState('home'); 
+
   let PageComponent;
-  switch (currentPage) {
-    case 'Home':
-      PageComponent = <Home />;
-      break;
-    case 'About':
-      PageComponent = <About />;
-      break;
-    case 'Services':
-      PageComponent = <Services />;
-      break;
-    case 'Blogs':
-      PageComponent = <Blogs />;
-      break;
-    case 'Contact':
-      PageComponent = <Contact />;
-      break;
-    default:
-      PageComponent = <Home />;
+  if (currentPage === 'home') {
+    PageComponent = <Home />;
+  } else if (currentPage === 'about') {
+    PageComponent = <About />;
+  } else if (currentPage === 'services') {
+    PageComponent = <Services />;
+  } else if (currentPage === 'blogs') {
+    PageComponent = <Blogs />;
+  } else if (currentPage === 'contact') {
+    PageComponent = <Contact />;
+  } else {
+    PageComponent = <Home />; 
   }
+
   return (
     <>
-      <Header />
+      <Header onNavigate={setCurrentPage} />
       <main className="main-content">
         {PageComponent}
       </main>
